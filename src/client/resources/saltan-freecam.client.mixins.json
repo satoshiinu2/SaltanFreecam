@@ -1,0 +1,22 @@
+{
+  "required": true,
+  "package": "com.satoshiinu.saltan.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "CameraMixin",
+    "TargetMixin",
+    "misc.BobDisableMixin",
+    "misc.ClientPlayerInputMixin",
+    "misc.ClientPlayerInputShadowMixin",
+    "misc.ClientPlayerTurnMixin",
+    "misc.PlayerViewableMixin",
+    "misc.SetCamTypeMixin",
+    "misc.nofalltest.NofallTestEntityMixin",
+    "misc.nofalltest.NoFallTestMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+  ]
+}
