@@ -3,7 +3,6 @@ package com.satoshiinu.saltan.mixin.client;
 import com.mojang.logging.LogUtils;
 import com.satoshiinu.saltan.SaltanFreecamClient;
 import net.minecraft.entity.Entity;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import org.slf4j.Logger;
 import org.spongepowered.asm.mixin.Mixin;
@@ -15,18 +14,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(Entity.class)
 public abstract class TargetMixin {
-    @Shadow public double prevX;
-    @Shadow public double prevY;
-    @Shadow public double prevZ;
 
-    @Shadow public abstract double getX();
-
-    @Shadow public abstract double getY();
-
-    @Shadow public abstract double getZ();
-
-    @Unique
-    private static final Logger LOGGER = LogUtils.getLogger();
+    @Shadow public abstract Vec3d getRotationVector(float pitch, float yaw);
 
 
     @Inject(method = "getCameraPosVec", at = @At("HEAD"), cancellable = true)
@@ -34,7 +23,13 @@ public abstract class TargetMixin {
         if(!SaltanFreecamClient.canMoveCamera())return;
         // only freecam enabled
 
-        cir.setReturnValue(SaltanFreecamClient.freecamPos);
+        cir.setReturnValue(SaltanFreecamClient.getLerpedPos(tickDelta));
+    }
+
+    @Inject(method = "getRotationVec", at = @At("HEAD"), cancellable = true)
+    public void getRotationVec(float tickDelta, CallbackInfoReturnable<Vec3d> cir) {
+        Vec3d vec3d = getRotationVector(SaltanFreecamClient.getLerpedPitch(tickDelta), SaltanFreecamClient.getLerpedYaw(tickDelta));
+        cir.setReturnValue(vec3d);
     }
 
 }
