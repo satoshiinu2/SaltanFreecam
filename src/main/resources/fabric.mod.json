@@ -3,13 +3,12 @@
 	"id": "saltan-freecam",
 	"version": "${version}",
 	"name": "Saltan Freecam",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Saltan Freecam Utility",
 	"authors": [
-		"Me!"
+		"Satoshiinu"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/satoshiinu2/SaltanFreecam"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/saltan-freecam/icon.png",

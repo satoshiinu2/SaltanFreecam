@@ -11,6 +11,7 @@
     "misc.ClientPlayerTurnMixin",
     "misc.PlayerViewableMixin",
     "misc.SetCamTypeMixin",
+    "misc.nightvision.NightVisionMixin",
     "misc.nofalltest.NofallTestEntityMixin",
     "misc.nofalltest.NoFallTestMixin"
   ],

@@ -1,9 +1,13 @@
 {
   "saltan.prefix" : "§l§5[§dSaltan§5] §r",
+  "saltan.freecam.pos": "Freecam Pos %s %s %s",
   "saltan.freecam.enabled": "Freecam §aEnabled",
   "saltan.freecam.disabled": "Freecam §cDisabled",
   "saltan.freecam.locked": "Freecam §aLocked",
   "saltan.freecam.unlocked": "Freecam §cUnlocked",
   "saltan.freecam.restore.success": "§9Restored last session",
-  "saltan.freecam.restore.failed": "§cFailed restore (no last session)"
+  "saltan.freecam.restore.failed": "§cFailed restore (no last session)",
+
+  "saltan.nightvision.enabled": "§9Night Vision §aEnabled",
+  "saltan.nightvision.disabled": "§9Night Vision §cDisabled"
 }

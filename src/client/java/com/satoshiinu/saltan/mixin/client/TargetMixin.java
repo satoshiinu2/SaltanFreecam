@@ -28,6 +28,8 @@ public abstract class TargetMixin {
 
     @Inject(method = "getRotationVec", at = @At("HEAD"), cancellable = true)
     public void getRotationVec(float tickDelta, CallbackInfoReturnable<Vec3d> cir) {
+        if(!SaltanFreecamClient.canMoveCamera())return;
+
         Vec3d vec3d = getRotationVector(SaltanFreecamClient.getLerpedPitch(tickDelta), SaltanFreecamClient.getLerpedYaw(tickDelta));
         cir.setReturnValue(vec3d);
     }
