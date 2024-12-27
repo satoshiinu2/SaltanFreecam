@@ -1,20 +1,18 @@
 package com.satoshiinu.saltan.mixin.client.misc.nightvision;
 
 import com.satoshiinu.saltan.SaltanFreecamClient;
-import net.minecraft.client.render.GameRenderer;
-import net.minecraft.entity.LivingEntity;
+import net.minecraft.client.render.LightmapTextureManager;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import org.spongepowered.asm.mixin.injection.Constant;
+import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
-@Mixin(GameRenderer.class)
+@Mixin(LightmapTextureManager.class)
 public abstract class NightVisionMixin {
-    @Inject(method = "getNightVisionStrength", at = @At("HEAD"), cancellable = true)
-    private static void overrideNightVision(LivingEntity entity, float tickDelta, CallbackInfoReturnable<Float> cir){
-//        if(SaltanFreecamClient.nightVisionEnabled)
-            cir.setReturnValue(1.0f);
-
+    @ModifyConstant(method = "update", constant = @Constant(floatValue = 0.0f ,ordinal = 1))
+    private float overrideNightVision2(float x){
         // special future
+        if(SaltanFreecamClient.nightVisionEnabled)
+            return 1.0F;
+        return x;
     }
 }

@@ -1,4 +1,10 @@
 {
+  "key.categories.saltan": "Saltan Freecam",
+  "key.saltan.toggleFreecam": "Toggle free cam",
+  "key.saltan.toggleMovePlayer": "Toggle Lock",
+  "key.saltan.goPrevPos": "Restore last session",
+  "key.saltan.nightvision": "Toggle night vision",
+
   "saltan.prefix" : "§l§5[§dSaltan§5] §r",
   "saltan.freecam.pos": "Freecam Pos %s %s %s",
   "saltan.freecam.enabled": "Freecam §aEnabled",
