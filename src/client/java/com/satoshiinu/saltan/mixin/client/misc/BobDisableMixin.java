@@ -1,6 +1,6 @@
 package com.satoshiinu.saltan.mixin.client.misc;
 
-import com.satoshiinu.saltan.SaltanFreecamClient;
+import com.satoshiinu.saltan.SaltanClient;
 import net.minecraft.client.render.GameRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import org.spongepowered.asm.mixin.Mixin;
@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class BobDisableMixin {
     @Inject(method = "bobView", at = @At("HEAD"), cancellable = true)
     private void disableBob(MatrixStack matrices, float tickDelta, CallbackInfo ci){
-        if(SaltanFreecamClient.freecamEnabled)
+        if(SaltanClient.shouldControlAltCam())
             ci.cancel();
         // only freecam enabled
     }

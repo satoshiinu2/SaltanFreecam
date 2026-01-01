@@ -1,6 +1,6 @@
 package com.satoshiinu.saltan.mixin.client.misc;
 
-import com.satoshiinu.saltan.SaltanFreecamClient;
+import com.satoshiinu.saltan.SaltanClient;
 import net.minecraft.client.render.Camera;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -12,7 +12,7 @@ public abstract class PlayerViewableMixin {
 
     @Inject(method = "isThirdPerson", at = @At("HEAD"), cancellable = true)
     private void isThredPersonOverride(CallbackInfoReturnable<Boolean> cir){
-        if(SaltanFreecamClient.freecamEnabled)
+        if(SaltanClient.shouldViewAltCam())
             cir.setReturnValue(true);
         // only freecam enabled
     }

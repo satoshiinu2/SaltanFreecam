@@ -1,13 +1,54 @@
 {
+  "key.categories.saltan": "Saltan Freecam",
+  "key.saltan.toggleFreecam": "Toggle free cam",
+  "key.saltan.toggleMovePlayer": "Toggle Lock",
+  "key.saltan.goPrevPos": "Restore last session",
+  "key.saltan.night_vision": "Toggle night vision",
+
   "saltan.prefix" : "§l§5[§dSaltan§5] §r",
   "saltan.freecam.pos": "Freecam Pos %s %s %s",
-  "saltan.freecam.enabled": "Freecam §aEnabled",
+  "saltan.freecam.enabled_old": "Freecam §aEnabled §7Press %s to lock camera",
+  "saltan.freecam.enabled": "Freecam §aEnabled §7Hold %s to control player",
   "saltan.freecam.disabled": "Freecam §cDisabled",
   "saltan.freecam.locked": "Freecam §aLocked",
   "saltan.freecam.unlocked": "Freecam §cUnlocked",
-  "saltan.freecam.restore.success": "§9Restored last session",
-  "saltan.freecam.restore.failed": "§cFailed restore (no last session)",
+  "saltan.freecam.restore.success": "§9Restored last position",
+  "saltan.freecam.restore.failed": "§cFailed restore (no saved position)",
 
-  "saltan.nightvision.enabled": "§9Night Vision §aEnabled",
-  "saltan.nightvision.disabled": "§9Night Vision §cDisabled"
+  "saltan.night_vision.enabled": "§9Night Vision §aEnabled",
+  "saltan.night_vision.disabled": "§9Night Vision §cDisabled",
+
+  "title.saltan.config": "Saltan Freecam Config",
+  "category.saltan.general": "General",
+  "options.saltan.freecam_move_speed": "Move speed",
+  "options.saltan.freecam_move_speed_multiplier": "Sprint speed multiplier",
+  "options.saltan.freecam_point_enabled": "Render freecam point",
+  "options.saltan.freecam_point_color": "Freecam point color",
+  "options.saltan.freecam_pos_hud_enabled": "Render freecam position",
+  "options.saltan.freecam_pos_hud_render_type": "Render freecam position",
+  "options.saltan.freecam_pos_hud_left": "Horizontal position",
+  "options.saltan.freecam_pos_hud_top": "Vertical position",
+  "options.saltan.freecam_pos_hud_offset_x": "Horizontal offset",
+  "options.saltan.freecam_pos_hud_offset_y": "Vertical offset",
+  "options.saltan.freecam_clamp_yaw": "Clamp camera yaw",
+  "options.saltan.freecam_swap_last_session": "Swap last position on restore",
+
+
+  "options.saltan.vertical.top": "top",
+  "options.saltan.vertical.bottom": "bottom",
+  "options.saltan.horizontal.left": "left",
+  "options.saltan.horizontal.right": "right",
+
+  "commands.saltan.config.set": "Config %s is now set to %s",
+  "commands.saltan.config.query": "Config %s is currently set to %s",
+  "commands.saltan.config.saved": "Config has been saved",
+  "commands.saltan.config.loaded": "Config has been reloaded",
+  "commands.saltan.config.list": "%s : %s",
+  "options.saltan.title": "Saltan Freecam",
+
+  "options.category.saltan.general": "General",
+  "options.category.saltan.render": "Render",
+  "options.category.saltan.hud": "HUD",
+  "options.category.saltan.other": "Other",
+  "options.category.saltan.nightvision": "Night Vision"
 }

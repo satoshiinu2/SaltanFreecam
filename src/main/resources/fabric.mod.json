@@ -1,40 +1,41 @@
 {
 	"schemaVersion": 1,
 	"id": "saltan-freecam",
-	"version": "${version}",
+	"version": "${mod_version}",
 	"name": "Saltan Freecam",
 	"description": "Saltan Freecam Utility",
 	"authors": [
 		"Satoshiinu"
 	],
 	"contact": {
-		"sources": "https://github.com/satoshiinu2/SaltanFreecam"
+		"homepage": "https://github.com/satoshiinu2/SaltanFreecam",
+		"sources": "https://github.com/satoshiinu2/SaltanFreecam",
+		"issues": "https://github.com/satoshiinu2/SaltanFreecam/issues"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/saltan-freecam/icon.png",
-	"environment": "*",
+	"icon": "assets/saltan/icon.png",
+	"environment": "client",
 	"entrypoints": {
-		"main": [
-			"com.satoshiinu.saltan.SaltanFreecam"
-		],
 		"client": [
-			"com.satoshiinu.saltan.SaltanFreecamClient"
+			"com.satoshiinu.saltan.SaltanClient"
+		],
+		"modmenu": [
+			"com.satoshiinu.saltan.SaltanModMenu"
 		]
 	},
 	"mixins": [
-		"saltan-freecam.mixins.json",
 		{
 			"config": "saltan-freecam.client.mixins.json",
 			"environment": "client"
 		}
 	],
 	"depends": {
-		"fabricloader": ">=0.16.9",
-		"minecraft": "~1.21.3",
+		"fabricloader": ">=${loader_version}",
+		"minecraft": "~${minecraft_version}",
 		"java": ">=21",
-		"fabric-api": "*"
+		"fabric-api": ">=${fabric_api_version}",
+		"satosconfig": "~${satosconfig_version}"
 	},
 	"suggests": {
-		"another-mod": "*"
 	}
 }

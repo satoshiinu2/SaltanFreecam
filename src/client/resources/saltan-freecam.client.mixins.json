@@ -6,7 +6,7 @@
     "CameraMixin",
     "TargetMixin",
     "misc.BobDisableMixin",
-    "misc.ClientPlayerInputMixin",
+    "misc.ClientPlayerInputDisableMixin",
     "misc.ClientPlayerInputShadowMixin",
     "misc.ClientPlayerTurnMixin",
     "misc.PlayerViewableMixin",
@@ -17,7 +17,5 @@
   ],
   "injectors": {
     "defaultRequire": 1
-  },
-  "mixins": [
-  ]
+  }
 }
